@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
 .titulo {
   text-align: center;
   color: rgb(0, 0, 0);
@@ -12,7 +13,6 @@ body {
     #0c7b43 100%
   );
 
-  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');
 
   body {
     display: flex;
@@ -22,119 +22,115 @@ body {
     gap: 30px;
   }
   
-
-  .top-bar, .bottom-bar {
-    background-color: #002244;
-    height: 50px;
-
-  }
-  
-  
-  .navbar {
-     display: flex;
-    position: fixed;
-    top: 10px; 
-    left: 0;
-    right: 0;
-    background-color: #fff7f0; 
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 40px;
-    border-bottom: 1px solid #ccc;
-    z-index: 1000;
-    font-family: 'Nunito', sans-serif;
-    -webkit-text-stroke: 1px black;
-    text-shadow: none;
-  }
-  
-
-  body::before {
-    content: "";
-    display: block;
-    height: 70px;
-  }
-  
-
-  .logo {
-    color: #ffcc00;
-    font-weight: 900;
-    font-size: 24px;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 0 black;
-  }
- 
-  .menu {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .menu li {
-    margin-left: 25px;
-  }
-  
-  .menu a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 700;
-    font-size: 15px;
-    transition: color 0.3s ease;
-    font-family: 'Nunito', sans-serif;
-  }
-  
-  .menu a:hover {
-    color: #eeff00;
-  }
-
-  
-}
-
-.cards-container {
+/* NAVBAR TRANSPARENTE */
+.navbar {
+  width: 100%;
+  padding: 20px 60px;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2rem;
-  flex-wrap: wrap;
-  padding: 20rem;
+  justify-content: flex-start; 
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent; /* deixa invisível */
+  z-index: 1000;
 }
 
-.card {
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  padding: 2rem 1.5rem;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* ÁREA DO LOGO + TEXTO */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+.logo-img {
+  width: 60px;
+  height: auto;
+  filter: drop-shadow(0 0 5px rgba(0,0,0,0.6)); /* sombra no logo */
 }
 
-.card-icon {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 1rem;
+.logo-text {
+  font-size: 32px;
+  font-weight: 900;
+  color: white;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px rgba(0,0,0,0.9); /* sombra forte para destacar */
 }
 
-.card h3 {
-  color: #222;
-  font-size: 1.2rem;
-  margin-bottom: 0.8rem;
+/* LINKS DO MENU */
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  justify-content: flex-start;
 }
 
-.card p {
-  color: #555;
-  font-size: 0.95rem;
-  line-height: 1.4rem;
+.nav-links a {
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  text-shadow: 0 0 5px rgba(0,0,0,0.8);
+  transition: 0.3s;
 }
 
-.descricao{
+.nav-links a:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 10px white;
+}
+
+  
+}
+.descricao h3 {
+  font-size: 2.2rem;       
+  font-family: 'Merriweather', serif; 
+  font-weight: 700;
   color: #ffffff;
   text-align: center;
-  padding: 100px 20px 0.5px;
+  text-transform: uppercase; 
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.9); 
+  max-width: 1100px;
+  margin: 150px auto 0;       
+  padding: 20px;
+
+  line-height: 1.5;
+}
   
+.carrossel-fundo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  transition: background-image 1s ease-in-out;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* ajuste a intensidade aqui */
+  backdrop-filter: brightness(0.6); /* deixa o fundo mais escuro ainda */
+  z-index: 1;
+}
+@keyframes fadeEffect {
+  0% {
+    opacity: 0.2;
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.carrossel-fundo {
+  pointer-events: none;
 }
