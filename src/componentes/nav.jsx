@@ -21,7 +21,7 @@ export default function Nav(){
 
         <ul className="nav-links">
   <Link to="/">Home</Link>
-  <Link to="/Jogos">Jogos</Link>
+  <Link to="/Jogo">Jogo</Link>
   <Link to="/Contato">Contato</Link>
 </ul>
       </nav>

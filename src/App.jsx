@@ -2,7 +2,7 @@ import { Route, Routes, BrowserRouter} from 'react-router-dom';
 import Home from './pages/Home.jsx';
 import Contato from './pages/Contato.jsx';
 import "./App.css";
-import Jogos from './pages/Jogos.jsx';
+import Jogo from './pages/Jogo.jsx';
 
 export default function App() {
   return(
@@ -10,7 +10,7 @@ export default function App() {
     <Routes>
         <Route path='/' element={<Home/>}/> 
         <Route path='/Contato' element={<Contato/>}/>
-        <Route path='/Jogos'element={<Jogos/>}/>
+        <Route path='/Jogo'element={<Jogo/>}/>
     
     </Routes>
     </BrowserRouter>

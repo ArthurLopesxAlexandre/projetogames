@@ -1,12 +1,12 @@
 import React from 'react';
-import "./Jogos.css";
+import "./Jo.css";
 import img2 from '../img/913243.jpg';
 import img3 from '../img/call-of-duty-warzone-4k-kzetz7h7t75073ye.jpg';
 import img4 from '../img/gta-online-pdz1sc5c5voimbh0.jpg';
 import img5 from '../img/wp1811277.jpg';
 import Nav from '../componentes/nav';
 
-export default function Jogos() {
+export default function Jogo() {
   return (
     <>
       <Nav/>
