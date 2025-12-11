@@ -2,7 +2,7 @@ import { Route, Routes, BrowserRouter} from 'react-router-dom';
 import Home from './pages/Home.jsx';
 import Contato from './pages/Contato.jsx';
 import "./App.css";
-import Jogos from './pages/jogos.jsx';
+import Jogos from './pages/Jogos.jsx';
 
 export default function App() {
   return(

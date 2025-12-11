@@ -6,7 +6,7 @@ import img4 from '../img/gta-online-pdz1sc5c5voimbh0.jpg';
 import img5 from '../img/wp1811277.jpg'
 import Nav from '../componentes/nav';
 
-export default function jogos(){
+export default function Jogos(){
     return (
         <>
         <Nav/>
